@@ -1,0 +1,35 @@
+.buildsystem {
+    display: flex;
+    flex-direction: column;
+}
+
+.buildsystem .task {
+    display: flex;
+    align-items: center;
+}
+
+.buildsystem .input,
+.buildsystem .output {
+    border: 4px solid white;
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.buildsystem .transform {
+    height: 150px;
+}
+
+.buildsystem .io {
+    flex: 1;
+    font-size: 300%;
+    line-height: 0;
+    margin-top: -20px;
+
+    /*outline: 1px dashed red;*/
+}
+
+.buildsystem .config {
+    flex: 1 1 auto;
+    padding: 30px;
+    color: yellow;
+}
