@@ -49,3 +49,10 @@
 .buildsystem.gulp .config {
     font-size: 300%;
 }
+
+.buildsystem.assetgraph .task > img {
+    height: 150px;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+}
