@@ -1,0 +1,36 @@
+.workflow {
+    position: relative;
+    width: 960px;
+    height: 640px;
+
+    outline: 1px dashed limegreen;
+}
+
+.workflow .devloop {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 20px solid white;
+    border-radius: 50%;
+
+    width: 600px;
+    height: 600px;
+}
+
+.workflow .running {
+    position: absolute;
+    bottom: -50px;
+    left: -110px;
+
+    width: 100px;
+    height: 100px;
+}
+
+.workflow .finish-flag {
+    position: absolute;
+    bottom: -50px;
+    right: -110px;
+
+    width: 100px;
+    height: 100px;
+}
