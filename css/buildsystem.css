@@ -31,5 +31,21 @@
 .buildsystem .config {
     flex: 1 1 auto;
     padding: 30px;
-    color: yellow;
+}
+
+.buildsystem.gulp .input,
+.buildsystem.gulp .output,
+.buildsystem.gulp .io {
+    opacity: 0;
+}
+
+.buildsystem.gulp .task:first-of-type .input,
+.buildsystem.gulp .task:first-of-type .io-before,
+.buildsystem.gulp .task:last-of-type .output,
+.buildsystem.gulp .task:last-of-type .io-after {
+    opacity: 1;
+}
+
+.buildsystem.gulp .config {
+    font-size: 300%;
 }
