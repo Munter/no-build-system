@@ -7,10 +7,6 @@
         path {
             fill: #fff;
         }
-
-        #big {
-            transform: rotate(45 10 10);
-        }
     </style>
 
     <g transform="translate(8.6599828e-4,-15.344)">

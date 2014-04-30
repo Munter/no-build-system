@@ -61,7 +61,44 @@
                 </section>
 
                 <section data-background="#1b82ae">
-                    <img src="images/podio.png">
+                    <img src="images/podio.svg" style="height: 400px">
+                </section>
+
+                <section>
+                    <h2>Development lifecycle</h2>
+                    <ul>
+                        <li class="fragment">Boilerplate / Bootstrapping</li>
+                        <li class="fragment">Package manager</li>
+                        <li class="fragment">Development iteration</li>
+                        <li class="fragment">Build &amp; Optimization</li>
+                        <li class="fragment">Deployment</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <p>Yeoman</p>
+                        <p>npm, bower</p>
+                        <p>Dev iteration - Meat and potatoes of web development</p>
+                        <p></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>No Build System</h1>
+                </section>
+
+                <section>
+                    <h2>Why a buildsystem?</h2>
+                </section>
+
+                <section data-background="images/speed.gif">
+                    <aside class="notes">
+                        <ul>
+                            <li>Reduced size</li>
+                            <li>Reduced requests</li>
+                            <li>Delivery</li>
+                            <li>A transport detail!</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
@@ -138,7 +175,55 @@
                     </section>
 
                     <section>
+                        Broken Relations
+                        <ul>
+                            <li>Our inability to map relations leads to transport details creeping into the development loop</li>
+                            <li>Breaking up is hard. Getting back together is difficult</li>
+                        </ul>
+                    </section>
+
+                    <section>
                         <img src="images/assetgraph.svg">
+                    </section>
+
+                    <section>
+                        <section>
+                            Graph model
+                            <ul>
+                                <li>It's all about the relations</li>
+                                <li>In memory representation</li>
+                                <li>Syntax tree instances</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            Auto discovery
+                            <aside class="notes">
+                                <ul>
+                                    <li>Static analysis of asset source</li>
+                                    <li>Behaves like a browser would</li>
+                                </ul>
+                                Reduce configuration. Interface: If it works in the browser, it works in the build system
+                            </aside>
+                        </section>
+
+                        <section>
+                            Chain of transforms
+                            <aside class="notes">
+                                <ul>
+                                    <li>In memory. Low I/O</li>
+                                    <li>Keeps relational integrity intact</li>
+                                    <li>Already a large set of optimization tasks available</li>
+                                </ul>
+                            </aside>
+                        </section>
+
+                        <section>
+                            Query model
+                            <aside class="notes">
+                                MongoDB-like query syntax
+                            </aside>
+                        </section>
                     </section>
 
                     <section>
@@ -210,6 +295,8 @@
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                transitionSpeed: 'slow',
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
