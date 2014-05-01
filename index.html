@@ -63,44 +63,86 @@
                 <section data-background="#1b82ae">
                     <img src="images/podio.svg" style="height: 400px">
                 </section>
-
-                <section>
-                    <h2>Development lifecycle</h2>
-                    <ul>
-                        <li class="fragment">Boilerplate / Bootstrapping</li>
-                        <li class="fragment">Package manager</li>
-                        <li class="fragment">Development iteration</li>
-                        <li class="fragment">Build &amp; Optimization</li>
-                        <li class="fragment">Deployment</li>
-                    </ul>
-
-                    <aside class="notes">
-                        <p>Yeoman</p>
-                        <p>npm, bower</p>
-                        <p>Dev iteration - Meat and potatoes of web development</p>
-                        <p></p>
-                    </aside>
-                </section>
-
                 <section>
                     <h1>No Build System</h1>
                 </section>
 
                 <section>
-                    <h2>Why a buildsystem?</h2>
-                </section>
-
-                <section data-background="images/speed.gif">
-                    <aside class="notes">
+                    <section>
+                        <h2>Development lifecycle</h2>
                         <ul>
-                            <li>Reduced size</li>
-                            <li>Reduced requests</li>
-                            <li>Delivery</li>
-                            <li>A transport detail!</li>
+                            <li class="fragment" data-fragment-index="3">Boilerplate / Bootstrapping</li>
+                            <li class="fragment" data-fragment-index="4">Package manager</li>
+                            <li class="fragment" data-fragment-index="1">Development iteration</li>
+                            <li class="fragment" data-fragment-index="5">Build &amp; Optimization</li>
+                            <li class="fragment" data-fragment-index="2">Deployment</li>
                         </ul>
-                    </aside>
+
+                        <aside class="notes">
+                            <p>Yeoman</p>
+                            <p>npm, bower</p>
+                            <p>Dev iteration - Meat and potatoes of web development</p>
+                            <p></p>
+                        </aside>
+                    </section>
+
+                    <section data-background="images/cat.gif">
+                        <h2>Development loop</h2>
+                        <ul>
+                            <li>Editor</li>
+                            <li>Authoring abstractions</li>
+                            <li>Livereload</li>
+                            <li>Browser</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Development lifecycle</h2>
+                        <ul>
+                            <li>Boilerplate / Bootstrapping</li>
+                            <li>Package manager</li>
+                            <li>Development iteration</li>
+                            <li>Build &amp; Optimization</li>
+                            <li>Deployment</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <p>Yeoman</p>
+                            <p>npm, bower</p>
+                            <p>Dev iteration - Meat and potatoes of web development</p>
+                            <p></p>
+                        </aside>
+                    </section>
                 </section>
 
+                <section>
+                    <section>
+                        <h2>Why a buildsystem?</h2>
+                    </section>
+
+                    <section data-background="images/speed.gif">
+                        <h2>Bandwidth</h2>
+                        <h2>Latency</h2>
+                        <aside class="notes">
+                            <ul>
+                                <li>Reduced size</li>
+                                <li>Reduced requests</li>
+                                <li>Delivery</li>
+                                <li>A transport detail!</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Development ≠ Production</h2>
+                    </section>
+
+                    <section>
+                        <h1>No Build System</h1>
+                        <p>In development</p>
+                    </section>
+                </section>
+<!--
                 <section>
                     <div class="workflow">
                         <div class="devloop"></div>
@@ -110,8 +152,12 @@
                     </div>
 
                 </section>
-
+-->
                 <section>
+                    <section>
+                        <h2>Tools</h2>
+                    </section>
+
                     <section data-background="images/grunt.svg" data-background-size="40%"></section>
 
                     <section data-background="images/grunt-fade.svg" data-background-size="40%">
@@ -175,11 +221,45 @@
                     </section>
 
                     <section>
+TODO: A website is a dependency graph
+                    </section>
+
+                    <section>
+TODO: Dependency graph icon with list beside it, showing duplicated entries
+                    </section>
+
+                    <section>
+TODO: Problem 1: Discoverability
+                    </section>
+
+                    <section>
+TODO: Dependency graph icon with broken relations
+                    </section>
+                    <section>
+TODO: Problem 2: Coherence
+complexity moves into dev loop
+                    </section>
+
+                    <section>
+Symptom: Bundling in development. Spriting in development. Bad, complex, unmaitainable
+                    </section>
+
+                    <section>
+Question: So what do we do about it?
+Perspective: shellscripts, Make, Yahoo builder.
+                    </section>
+
+<!--
+                    <section>
                         Broken Relations
                         <ul>
                             <li>Our inability to map relations leads to transport details creeping into the development loop</li>
                             <li>Breaking up is hard. Getting back together is difficult</li>
                         </ul>
+                    </section>
+-->
+                    <section data-background="images/enlightenment.svg">
+IDEA: The browser a an interface between development and build
                     </section>
 
                     <section>
@@ -187,43 +267,43 @@
                     </section>
 
                     <section>
-                        <section>
-                            Graph model
+                        Graph model
+                        <aside class="notes">
                             <ul>
                                 <li>It's all about the relations</li>
                                 <li>In memory representation</li>
                                 <li>Syntax tree instances</li>
                             </ul>
-                        </section>
+                        </aside>
+                    </section>
 
-                        <section>
-                            Auto discovery
-                            <aside class="notes">
-                                <ul>
-                                    <li>Static analysis of asset source</li>
-                                    <li>Behaves like a browser would</li>
-                                </ul>
-                                Reduce configuration. Interface: If it works in the browser, it works in the build system
-                            </aside>
-                        </section>
+                    <section>
+                        Auto discovery
+                        <aside class="notes">
+                            <ul>
+                                <li>Static analysis of asset source</li>
+                                <li>Behaves like a browser would</li>
+                            </ul>
+                            Reduce configuration. Interface: If it works in the browser, it works in the build system
+                        </aside>
+                    </section>
 
-                        <section>
-                            Chain of transforms
-                            <aside class="notes">
-                                <ul>
-                                    <li>In memory. Low I/O</li>
-                                    <li>Keeps relational integrity intact</li>
-                                    <li>Already a large set of optimization tasks available</li>
-                                </ul>
-                            </aside>
-                        </section>
+                    <section>
+                        Chain of transforms
+                        <aside class="notes">
+                            <ul>
+                                <li>In memory. Low I/O</li>
+                                <li>Keeps relational integrity intact</li>
+                                <li>Already a large set of optimization tasks available</li>
+                            </ul>
+                        </aside>
+                    </section>
 
-                        <section>
-                            Query model
-                            <aside class="notes">
-                                MongoDB-like query syntax
-                            </aside>
-                        </section>
+                    <section>
+                        Query model
+                        <aside class="notes">
+                            MongoDB-like query syntax
+                        </aside>
                     </section>
 
                     <section>
@@ -253,6 +333,51 @@
                             </div>
                         </div>
                     </section>
+                </section>
+
+                <section>
+                    <h2>That's all fine...</h2>
+                    <h2>But how can I use it?</h2>
+                </section>
+
+                <section>
+                    <img src="images/tastejs.png">
+                </section>
+
+                <section>
+TODO: Perspective, No transport concerns in dev. If it works in the browser, it works in the build system
+                </section>
+
+                <section>
+                Show slide of dev lifecycle with assetgraph in it
+                </section>
+
+                <section>
+                    <img src="images/yabs.jpg">
+                </section>
+
+                <section>
+TODO: Perspective: Other ideas
+                    <ul>
+                        <li>Website to email</li>
+                        <li>Content security policies</li>
+                        <li>Package websites without zip</li>
+                        <li>Caching development server</li>
+                        <li>SPDY push server</li>
+                        <li>Editor with dependency knowledge</li>
+                    </ul>
+                </section>
+
+                <section>
+                TODO: Logos of users. One.com, Typekit, Falcon Social
+                </section>
+
+                <section>
+                TODO: License, urls etc
+                </section>
+
+                <section>
+                    <h2>If it works in the browser it works in your buildsystem</h2>
                 </section>
 
                 <section>
