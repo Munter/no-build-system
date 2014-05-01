@@ -406,7 +406,7 @@ TODO: Perspective: Other ideas
 		<script src="js/reveal.min.js"></script>
 
 		<script>
-
+            function GETSTATICURL(text){return text;}
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -429,12 +429,12 @@ TODO: Perspective: Other ideas
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: GETSTATICURL('lib/js/classList.js'), condition: function() { return !document.body.classList; } },
+					{ src: GETSTATICURL('plugin/markdown/marked.js'), condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: GETSTATICURL('plugin/markdown/markdown.js'), condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: GETSTATICURL('plugin/highlight/highlight.js'), async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: GETSTATICURL('plugin/zoom-js/zoom.js'), async: true, condition: function() { return !!document.body.classList; } },
+                    { src: GETSTATICURL('plugin/notes/notes.js'), async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
