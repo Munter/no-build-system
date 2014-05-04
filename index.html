@@ -276,25 +276,21 @@
                         <h2 class="fragment">Lots of iterations</h2>
                     </section>
 
-<!--
-                    <section>
-                        Broken Relations
-                        <ul>
-                            <li>Our inability to map relations leads to transport details creeping into the development loop</li>
-                            <li>Breaking up is hard. Getting back together is difficult</li>
-                        </ul>
-                    </section>
--->
-                    <section data-background="images/enlightenment.svg">
-IDEA: The browser a an interface between development and build
+                    <section data-background="images/enlightenment.svg" data-background-size="800px" class="shadow">
+                        <h2>Use the source</h2>
+                        <h2 class="fragment">Just like the browser</h2>
                     </section>
 
-                    <section>
-                        <img src="images/assetgraph.svg">
+                    <section data-background="images/assetgraph.svg" data-background-size="600px" class="shadow">
+                        <h1>Asset<span style="color: #9D9">Graph</span></h1>
                     </section>
 
-                    <section>
-                        Auto discovery
+                    <section data-background="images/empirejsgraph.png" class="shadow">
+                        <h2>Graph model</h2>
+                    </section>
+
+                    <section data-background="images/discovery.jpg" class="shadow">
+                        <h2>Discovery</h2>
                         <aside class="notes">
                             <ul>
                                 <li>Static analysis of asset source</li>
@@ -304,26 +300,8 @@ IDEA: The browser a an interface between development and build
                         </aside>
                     </section>
 
-                    <section>
-                        Graph model
-                        <aside class="notes">
-                            <ul>
-                                <li>It's all about the relations</li>
-                                <li>In memory representation</li>
-                                <li>Syntax tree instances</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
-                        Query model
-                        <aside class="notes">
-                            MongoDB-like query syntax
-                        </aside>
-                    </section>
-
-                    <section>
-                        Chain of transforms
+                    <section data-background="images/broken-chain.jpg" class="shadow">
+                        <h2>Coherence</h2>
                         <aside class="notes">
                             <ul>
                                 <li>In memory. Low I/O</li>
@@ -363,75 +341,144 @@ IDEA: The browser a an interface between development and build
                 </section>
 
                 <section>
-                    <h2>Enough with the theory!</h2>
-                    <h2>How can I use it?</h2>
-                </section>
+                    <section>
+                        <h2>Enough with the theory!</h2>
+                        <h2>How can I use it?</h2>
+                    </section>
 
+                    <section>
+                        <h2>Do it yourself</h2>
+                        <h2 class="fragment">Difficult, new paradigm</h2>
+                        <h2 class="fragment">Difficult, lacking documentation</h2>
+                        <h2 class="fragment">:'(</h2>
+                    </section>
 
+                    <section>
+                        <h2>Use our tools</h2>
+                        <h2 class="fragment">assetgraph-builder</h2>
+                        <h2 class="fragment">grunt-reduce</h2>
+                    </section>
 
-                <section>
-                    <img src="images/tastejs.png">
-                </section>
+                    <section data-background="images/tastejs.png" data-background-size="600px" class="shadow">
+                        <h2 class="fragment">TodoMVC</h2>
+                        <pre class="fragment">&lt;<span style="color: #FFC">Munter</span>&gt;     I was thinking of building all todomvcs with it for demo
+&lt;<span style="color: #FCF">addyosmani</span>&gt; lol
+&lt;<span style="color: #FCF">addyosmani</span>&gt; If you're able to do anything with all the todomvcs,
+             I'm impressed. Even a few is something
+&lt;<span style="color: #FFC">Munter</span>&gt;     challenge accepted :)</pre>
+                    </section>
 
-                <section>
-TODO: Perspective, No transport concerns in dev. If it works in the browser, it works in the build system
-                </section>
+                    <section>
+                        <h2>TodoMVC-challenge</h2>
+                        <h2>First iteration:</h2>
+                        <h1 class="fragment">40% success</h1>
+                    </section>
 
-                <section>
-                Show slide of dev lifecycle with assetgraph in it
-                </section>
+                    <section>
+                        <h2>TodoMVC-challenge</h2>
+                        <h2>Current status:</h2>
+                        <h1 class="fragment">80% success</h1>
+                    </section>
 
-                <section>
-                    <img src="images/yabs.png">
-                </section>
+                    <section data-background="images/success.jpg"></section>
 
-                <section>
-TODO: Perspective: Other ideas
-                    <ul>
-                        <li>Website to email</li>
-                        <li>Content security policies</li>
-                        <li>Package websites without zip</li>
-                        <li>Caching development server</li>
-                        <li>SPDY push server</li>
-                        <li>Editor with dependency knowledge</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>In production</h2>
-                    <div class="flex">
-                        <img src="images/onecom.png" alt="">
-                        <img src="images/typekit.svg" alt="">
-                        <img src="images/falcon.png" alt="">
-                    </div>
-                </section>
-
-                <section>
-                TODO: License, urls etc
-                </section>
-
-                <section>
-                    <h2>If it works in the browser it works in your buildsystem</h2>
+                    <section data-background="images/yabs.png" data-background-size="580px" class="shadow">
+                        <h1>yabs?</h1>
+                        <h2 class="fragment">Just make it work in the browser</h2>
+                    </section>
                 </section>
 
                 <section>
-                    <h1>QA</h1>
+                    <section>
+                        <h2>Assetgraph</h2>
+                        <p>Twitter: <a href="https://twitter.com/assetgraph">@assetgraph</a></p>
+                        <p>Web: <a href="http://assetgraph.org">assetgraph.org</a></p>
+                        <p>Github: <a href="https://github.com/assetgraph">assetgraph</a></p>
+                        <p>Freenode: #assetgraph</p>
+                        <div class="flex">
+                            <div>
+                                <p>Language: Javascript (node)</p>
+                                <p>License: 3-clause BSD</p>
+                                <p>First commit: Dec 23, 2010</p>
+                            </div>
+                            <div>
+                                <p>Commits: 2259</p>
+                                <p>Issues: 30 / 149</p>
+                                <p>Test cases: 837</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Used by</h2>
+                        <div class="flex">
+                            <img src="images/onecom.png" alt="">
+                            <img src="images/typekit.svg" alt="">
+                            <img src="images/falcon.png" alt="">
+                        </div>
+                    </section>
                 </section>
 
                 <section>
-                    <h1>Thanks!</h1>
+                    <section>
+                        <h1>Demo</h1>
+                        <h2 class="fragment">... But only if I talked to fast<br>or skipped something</h2>
+                    </section>
 
-                    <p><a href="http://twitter.com/_munter_">@_munter_</a></p>
-                    <p><a href="http://mntr.dk">http://mntr.dk</a></p>
+                    <section>
+                        <h2>Assetgraph-builder</h2>
+                        <p>Building a TodoMVC app</p>
+                        <p><a href="https://github.com/assetgraph/assetgraph-builder">assetgraph-builder - buildProduction</a></p>
+                        <code>buildProduction ~/assetgraph/todomvc/architecture-examples/jquery/index.html --outroot demo</code>
+                    </section>
+
+                    <section>
+                        <h2>Assetviz</h2>
+                        <p>Generate a graph of the empirejs website</p>
+                        <p><a href="https://github.com/Munter/assetviz">Assetviz</a></p>
+                        <code>assetviz http://2014.empirejs.org</code>
+                    </section>
+
+                    <section>
+                        <h2>Contensecure</h2>
+                        <p>Autogenerate a Content Security Policy through static analysis</p>
+                        <p><a href="https://github.com/Munter/contentsecure">Contentsecure</a></p>
+                        <code>contentsecure http://2014.empirejs.org</code>
+                    </section>
+
+                    <section>
+                        <h2>Expush</h2>
+                        <p>Serve static assets with spdy-push using assetgraph for memcache and relation traversal</p>
+                        <p><a href="https://github.com/Munter/expush">Expush</a></p>
+                        <code>cd ~/talk/no-build-system; expush</code>
+                    </section>
+
+                    <section>
+                        <h2>In progress</h2>
+                        <ul>
+                            <li>Website to email</li>
+                            <li>Package websites without zip</li>
+                            <li>Caching development server</li>
+                            <li>SPDY push server</li>
+                            <li>Editor with dependency knowledge</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Images (creative commons)</h2>
-                    <p><a href="http://nomadicpursuits.com/">Jim Nix</a>: <a href="https://www.flickr.com/photos/jimnix/8176695729">Blue hour in Denmark</a></p>
-                    <p><a href="http://thenounproject.com/marc_io/">Márcio Duarte</a>: <a href="http://commons.wikimedia.org/wiki/File:Gear_-_Noun_project_7137.svg">Gear, Noun project</a></p>
+                    <section>
+                        <h1 class="fragment" data-fragment-index="2">Don't worry 'bout</h1>
+                        <h1>No build system</h1>
+                        <h2 class="fragment" data-fragment-index="3">Just make it work in the browser</h2>
+                    </section>
+
+                    <section>
+                        <h1>Thanks!</h1>
+
+                        <p><a href="http://twitter.com/_munter_">@_munter_</a></p>
+                        <p><a href="http://mntr.dk">http://mntr.dk</a></p>
+                    </section>
                 </section>
-
-
 			</div>
 
 		</div>
