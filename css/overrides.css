@@ -4,3 +4,13 @@
     box-shadow: none;
     margin: 0;
 }
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex img {
+    width: 30%;
+}
