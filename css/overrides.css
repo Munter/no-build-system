@@ -14,3 +14,15 @@
 .flex img {
     width: 30%;
 }
+
+.flex-big {
+    font-size: 4em !important;
+}
+
+.flex-big img {
+    width: 45%;
+}
+
+.shadow *{
+    text-shadow: 0 2px 10px black !important;
+}

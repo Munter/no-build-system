@@ -121,8 +121,7 @@
                     </section>
 
                     <section data-background="images/speed.gif">
-                        <h2>Bandwidth</h2>
-                        <h2>Latency</h2>
+                        <h2>Transport</h2>
                         <aside class="notes">
                             <ul>
                                 <li>Reduced size</li>
@@ -134,7 +133,21 @@
                     </section>
 
                     <section>
-                        <h2>Development ≠ Production</h2>
+                        <h2>Development code</h2>
+                        <img src="images/unicorn.gif" alt="">
+                    </section>
+
+                    <section>
+                        <h2>Production code</h2>
+                        <img src="images/evilhorse.jpg" alt="">
+                    </section>
+
+                    <section>
+                        <div class="flex flex-big">
+                            <img src="images/unicorn.gif" alt="">
+                            <div>≠</div>
+                            <img src="images/evilhorse.jpg" alt="">
+                        </div>
                     </section>
 
                     <section>
@@ -155,13 +168,21 @@
 -->
                 <section>
                     <section>
-                        <h2>Tools</h2>
+                        <h2>Automation</h2>
                     </section>
 
                     <section data-background="images/grunt.svg" data-background-size="40%"></section>
 
                     <section data-background="images/grunt-fade.svg" data-background-size="40%">
                         <div class="buildsystem">
+                            <div class="task fragment" data-fragment-index="2">
+                                <div class="input">Input</div>
+                                <div class="io io-before">→</div>
+                                <img src="images/gears.svg" class="transform">
+                                <div class="io io-after">→</div>
+                                <div class="output">Output</div>
+                            </div>
+                            <div class="config fragment" data-fragment-index="3">Configuration</div>
                             <div class="task">
                                 <div class="input">Input</div>
                                 <div class="io io-before">→</div>
@@ -169,16 +190,8 @@
                                 <div class="io io-after">→</div>
                                 <div class="output">Output</div>
                             </div>
-                            <div class="config">Configuration</div>
-                            <div class="task">
-                                <div class="input">Input</div>
-                                <div class="io io-before">→</div>
-                                <img src="images/gears.svg" class="transform">
-                                <div class="io io-after">→</div>
-                                <div class="output">Output</div>
-                            </div>
-                            <div class="config">Configuration</div>
-                            <div class="task">
+                            <div class="config fragment" data-fragment-index="3">Configuration</div>
+                            <div class="task fragment" data-fragment-index="2">
                                 <div class="input">Input</div>
                                 <div class="io io-before">→</div>
                                 <img src="images/gears.svg" class="transform">
@@ -201,16 +214,16 @@
                                 <div class="io io-after">→</div>
                                 <div class="output">Output</div>
                             </div>
-                            <div class="config">↓</div>
-                            <div class="task">
+                            <div class="config fragment" data-fragment-index="2">↓</div>
+                            <div class="task fragment" data-fragment-index="2">
                                 <div class="input">Input</div>
                                 <div class="io io-before">→</div>
                                 <img src="images/gears.svg" class="transform">
                                 <div class="io io-after">→</div>
                                 <div class="output">Output</div>
                             </div>
-                            <div class="config">↓</div>
-                            <div class="task">
+                            <div class="config fragment" data-fragment-index="3">↓</div>
+                            <div class="task fragment" data-fragment-index="3">
                                 <div class="input">Input</div>
                                 <div class="io io-before">→</div>
                                 <img src="images/gears.svg" class="transform">
@@ -221,32 +234,46 @@
                     </section>
 
                     <section>
-TODO: A website is a dependency graph
+                        <h2>Unix tool wrappers</h2>
+                        <ul class="fragment">
+                            <li>Make</li>
+                            <li>Jake</li>
+                            <li>Rake</li>
+                            <li>Ant</li>
+                            <li>Maven</li>
+                        </ul>
                     </section>
 
                     <section>
-TODO: Dependency graph icon with list beside it, showing duplicated entries
+                        <h2>A website is a dependency graph</h2>
+                        <img src="images/dependencygraph.png" alt="">
                     </section>
 
-                    <section>
-TODO: Problem 1: Discoverability
+                    <section data-background="images/discovery.jpg" class="shadow">
+                        <p>Problem:</p>
+                        <h2>Discovery</h2>
                     </section>
 
-                    <section>
-TODO: Dependency graph icon with broken relations
-                    </section>
-                    <section>
-TODO: Problem 2: Coherence
-complexity moves into dev loop
+                    <section data-background="images/broken-chain.jpg" class="shadow">
+                        <p>Problem:</p>
+                        <h2>Coherence</h2>
                     </section>
 
-                    <section>
-Symptom: Bundling in development. Spriting in development. Bad, complex, unmaitainable
+                    <section data-background="images/leak.gif" class="shadow">
+                        <h2>Development Anti-Patterns</h2>
+                        <p>File renaming</p>
+                        <p>Bundling</p>
+                        <p>Spriting</p>
+                        <p>Compression</p>
                     </section>
 
-                    <section>
-Question: So what do we do about it?
-Perspective: shellscripts, Make, Yahoo builder.
+                </section>
+
+                <section>
+
+                    <section data-background="images/thoughts.jpg">
+                        <h2 class="strike">Deep thoughts</h2>
+                        <h2 class="fragment">Lots of iterations</h2>
                     </section>
 
 <!--
@@ -267,17 +294,6 @@ IDEA: The browser a an interface between development and build
                     </section>
 
                     <section>
-                        Graph model
-                        <aside class="notes">
-                            <ul>
-                                <li>It's all about the relations</li>
-                                <li>In memory representation</li>
-                                <li>Syntax tree instances</li>
-                            </ul>
-                        </aside>
-                    </section>
-
-                    <section>
                         Auto discovery
                         <aside class="notes">
                             <ul>
@@ -289,12 +305,12 @@ IDEA: The browser a an interface between development and build
                     </section>
 
                     <section>
-                        Chain of transforms
+                        Graph model
                         <aside class="notes">
                             <ul>
-                                <li>In memory. Low I/O</li>
-                                <li>Keeps relational integrity intact</li>
-                                <li>Already a large set of optimization tasks available</li>
+                                <li>It's all about the relations</li>
+                                <li>In memory representation</li>
+                                <li>Syntax tree instances</li>
                             </ul>
                         </aside>
                     </section>
@@ -303,6 +319,17 @@ IDEA: The browser a an interface between development and build
                         Query model
                         <aside class="notes">
                             MongoDB-like query syntax
+                        </aside>
+                    </section>
+
+                    <section>
+                        Chain of transforms
+                        <aside class="notes">
+                            <ul>
+                                <li>In memory. Low I/O</li>
+                                <li>Keeps relational integrity intact</li>
+                                <li>Already a large set of optimization tasks available</li>
+                            </ul>
                         </aside>
                     </section>
 
@@ -336,9 +363,11 @@ IDEA: The browser a an interface between development and build
                 </section>
 
                 <section>
-                    <h2>That's all fine...</h2>
-                    <h2>But how can I use it?</h2>
+                    <h2>Enough with the theory!</h2>
+                    <h2>How can I use it?</h2>
                 </section>
+
+
 
                 <section>
                     <img src="images/tastejs.png">
