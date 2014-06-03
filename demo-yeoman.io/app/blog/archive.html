@@ -1,0 +1,22 @@
+---
+layout: default
+title: Yeoman Team Blog Archives
+category: blog
+class: blog
+type: list
+---
+
+<header>
+  <h1 class="banner">
+    <span>Yeoman Team Blog</span>
+  </h1>
+</header>
+
+{% for post in site.posts %}
+  <p>
+    <a href="{{ post.url }}" class="post-date">
+      &raquo; {{ post.title }}
+    </a>
+    - {{ post.date | date: "%B %e, %Y" }}
+  </p>
+{% endfor %}

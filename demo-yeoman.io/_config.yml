@@ -1,0 +1,32 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: Yeoman.io
+description: Yeoman website
+author:
+  name: Yeoman.io
+
+url : http://yeoman.io
+atom_path : /blog/atom.xml
+
+source: ./app/
+destination: ./site/
+
+# Grunt handles images and assets.
+exclude: ['node_modules']
+
+include: ['.htaccess']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+permalink: /blog/:title.html
+
+# Markdown library
+markdown: redcarpet
+#   extensions: ['fenced_code_blocks', 'smart']
+
+pygments: true

@@ -1,0 +1,37 @@
+---
+layout: default
+title: Yeoman Team Blog
+category: blog
+class: blog
+type: list
+---
+
+<header>
+  <h1 class="banner">
+    <span>Yeoman Team Blog</span>
+  </h1>
+</header>
+
+<div id="posts">
+  {% for post in site.posts limit:8 %}
+    <article>
+      <h2 class="post-title">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <a href="{{ post.url }}" class="post-date">
+        Published: {{ post.date | date: "%B %e, %Y" }}
+      </a>
+
+      <div class="post-content">{{ post.excerpt }}</div>
+
+      <a href="{{ post.url }}">Read more &raquo;</a>
+    </article>
+  {% endfor %}
+
+  <article>
+    <a href="/blog/archive.html">View the Archives</a></li>
+  </article>
+</div>
