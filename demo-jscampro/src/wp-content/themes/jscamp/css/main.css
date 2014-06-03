@@ -1,0 +1,1441 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing:border-box;
+}
+
+body {
+    font-size:17px;
+    line-height: 1.5;
+    font-family:"Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-weight:300;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+a, a:visited {
+    color:#C3C401;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size:26px;
+}
+
+h4 {
+    font-size:20px;
+}
+
+/* LAYOUT ELEMENTS */
+
+.block {
+    width:90%;
+    max-width:1130px;
+    margin:0 auto;
+    position:relative;
+}
+
+.block:before,
+.block:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.block:after {
+    clear: both;
+}
+
+.wrapper {
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    position:relative;
+}
+
+header {
+    position:fixed;
+    width:100%;
+    text-align:center;
+    z-index:100;
+    background:url(../img/bk_header.jpg) 20% 54% no-repeat;
+    padding-top:95px;
+    background-size:cover;
+}
+
+.home header {
+    padding-top:115px;
+    background:url(../img/bk_header.jpg) 20% 100% no-repeat;
+    background-size:cover;
+}
+
+
+.content {
+    z-index:102;
+    position:relative;
+    background:#fff;
+    margin:355px 0 0;
+
+}
+
+.home .content {
+    margin-top:595px;
+}
+
+footer {
+    padding:20px 0 40px;
+    color:#808281;
+    text-align:center;
+    background:url(../img/bk_header.png);
+    position:relative;
+    z-index:103;
+}
+
+footer nav a,
+footer nav a:visited {
+  color:#808281;
+  opacity:0.8;
+}
+
+footer a:hover {
+    opacity:1;
+}
+
+
+/* HEADER ELEMENTS
+--------------------------*/
+
+
+/* Logo */
+
+.logo {
+    font-size:100px;
+    /*color:rgba(233,52,86,0.94);*/
+    line-height:1;
+    margin:15px 0 35px;
+    position:relative;
+    z-index:100;
+}
+
+.home .logo {
+    margin:45px 0 65px
+}
+
+.logo span {
+    display:block;
+    font-size:23px;
+    font-weight:400;
+    color:#fff;
+    line-height:1.5;
+    padding:20px 0 30px;
+}
+
+.logo img {
+    width:80%;
+    max-width:412px;
+}
+
+
+.logo a {
+    outline:none;
+}
+
+.logo a:hover {
+    text-decoration:none;
+}
+
+.main-tagline {
+    font-weight:300;
+    font-size:24px;
+    display:none;
+    padding:15px;
+    width:100%;
+    bottom:0;
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    margin:0 0 80px;
+}
+
+.home .main-tagline {
+    display:block;
+}
+
+
+
+/* NAVIGATION
+--------------------------*/
+
+.top-bar {
+    background:#000;
+    text-align: center;
+    height:64px;
+    text-transform:uppercase;
+    position:fixed;
+    top:0;
+    z-index:103;
+    width:100%;
+
+}
+
+nav.mobile-menu{
+    display:none;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+
+}
+
+nav.nav-left {
+    position:absolute;
+    right:50%;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    top:0;
+}
+
+nav.nav-right {
+    position:absolute;
+    left:50%;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    top:0;
+}
+
+nav ul {
+    padding:3px 0 0 0;
+}
+
+nav ul li {
+    display:inline-block;
+    text-align:center;
+    padding:0 30px;
+}
+
+.footer-nav ul li {
+    padding:0 20px;
+}
+
+nav a, nav a:visited {
+    opacity:0.8;
+    -webkit-transition:opacity 0.2s;
+    -moz-transition:opacity 0.2s;
+    transition:opacity 0.2s;
+    color:#fff;
+    position:relative;
+    padding:5px 0;
+}
+
+nav a:hover {
+    text-decoration:none;
+    opacity:1;
+}
+
+a.menu-link {
+    display:none;
+    position:relative;
+    z-index:1000;
+    text-transform:uppercase;
+    color:#fff;
+    font-weight:700;
+    padding:0.7em 1em;
+}
+
+a.menu-link,a.menu-link:visited {
+    text-decoration:none;
+}
+
+.top-logo {
+    /*position:absolute;*/
+    top:0;
+    background:url(../img/bk_but_ticket.jpg);
+    border-radius:0 0 6px 6px;
+    box-shadow:0 0 4px #666;
+    text-align:center;
+    padding:7px 15px 10px;
+    color:#fff;
+    font-weight:700;
+    font-size:1.6em;
+    line-height:1.2;
+    vertical-align: middle;
+    width:170px;
+    display:inline-block;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    display:none;
+    text-shadow:1px 1px #B9BC02;
+}
+
+.top-logo a {
+    color:#fff;
+    text-decoration:none;
+}
+
+.top-logo span {
+    font-size:0.5em;
+    font-weight:400;
+    display:block;
+    padding-top:7px;
+
+}
+
+.cl-effect-21 ul li a {
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.cl-effect-21 ul li a::before,
+.cl-effect-21 ul li a::after{
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    -moz-transition: opacity 0.2s, -moz-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+
+.cl-effect-21 ul li a::before {
+    top: -1px;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.cl-effect-21 ul li a::after {
+    bottom: -1px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus {
+
+}
+
+.cl-effect-21 ul li a:hover::before,
+.cl-effect-21 ul li a:focus::before,
+.cl-effect-21 ul li a:hover::after,
+.cl-effect-21 ul li a:focus::after {
+    opacity: 0.3;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* CONTENT ELMENTS
+--------------------------*/
+
+.content h2 {
+    margin:40px 0;
+    text-align:center;
+    font-size:40px;
+}
+
+.content h2 span {
+    font-size:22px;
+    font-weight:300;
+    display:block;
+}
+
+.speakers, .schedule,.registration, .speakers-details, .become-sponsor {
+    text-align:center;
+    border-bottom:1px solid #D9DCDE;
+}
+
+.speakers h3,.schedule h3, .registration h3, .become-sponsor h3 {
+    margin:1em auto 1.8em;
+    width:90%;
+    font-weight:300;
+}
+
+.registration .col h3, .become-sponsor .col h3, .registration h3.form {
+    font-weight:700;
+    width:100%;
+    margin:1em 0;
+}
+
+.registration h3.form {
+    margin:0;
+}
+
+.registration .grid3 .col h3{
+    font-weight:300;
+    margin-top:0;
+}
+
+.but-ticket, .but-ticket:visited{
+    display:inline-block;
+    padding:15px 35px;
+    background:#333;
+    color:#fff;
+    font-size:23px;
+    font-weight:700;
+    border-radius:4px;
+    width:90%;
+    box-shadow:0 0 3px #ccc;
+}
+
+.but-ticket.disabled {
+    background:#bbb;
+}
+
+.but-ticket span {
+    font-size:0.7em;
+    font-weight:400;
+}
+
+.become-sponsor .col h3 {
+    color:#DF5519;
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:0.5em;
+}
+
+.become-sponsor .col h4 {
+    font-size:1.2em;
+    color:#EC2E52;
+}
+
+.become-sponsor .col ul {
+    padding-left:1em;
+}
+
+.become-sponsor .col ul li {
+    padding:5px 0;
+}
+
+.speakers .speaker {
+    text-align:center;
+    text-transform:uppercase;
+    line-height:1.2;
+    font-weight:700;
+}
+
+
+.speakers .speaker a img {
+    margin-bottom:20px;
+    width:75%;
+    border-radius:50%;
+}
+
+.speakers .speaker-link, .speakers .company {
+    font-size:0.8em;
+    color:#666;
+    font-weight:400;
+    word-wrap:break-word;
+}
+
+.speakers .tba {
+    background:url(../img/bk_tba.png);
+    line-height:100%;
+    color:#fff;
+    text-shadow:0 -1px #666;
+    height:100%;
+}
+
+.speakers-details article:first-of-type {
+    border-top:1px solid #D9DCDE;
+    padding-top:40px;
+}
+
+.speaker-details, .sponsor-details {
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:30px;
+    margin-bottom:40px;
+    text-align:left;
+}
+
+.speaker-details .image, .sponsor-details .image {
+    float:left;
+    width:20%;
+    margin-right:5%;
+    text-align:center;
+}
+
+.speaker-details .details, .sponsor-details .details {
+    float:left;
+    width:75%;
+}
+
+.speaker-details .url, .speaker-details .twitter, .sponsor-details .url, .sponsor-details .twitter {
+    display:inline-block;
+    text-transform: uppercase;
+    color:#666;
+    font-size:0.8em;
+    padding:15px 27px;
+    font-weight:700;
+}
+
+.speaker-details .url, .sponsor-details .url {
+    background:url(../img/ico_url.png) 0 50% no-repeat;
+}
+
+.speaker-details .twitter, .sponsor-details .twitter {
+    background:url(../img/ico_twitter.png) 0 50% no-repeat;
+}
+
+.speaker-details .image img, .sponsor-details .image img {
+    /*max-width:80%;*/
+    border-radius:50%;
+}
+
+.sponsor-details .image img {
+    border-radius: 0;
+}
+
+.speaker-details h3 {
+    text-transform: uppercase;
+    margin:0;
+    color:#C3C401;
+    font-size:22px;
+}
+
+.speaker-details h3 span {
+    font-size:17px;
+    color:#666;
+    font-weight:700;
+}
+
+.speaker-details h4 {
+    text-transform: uppercase;
+}
+
+.home-getticket, .home-getticket:visited{
+    display:inline-block;
+    padding:15px 35px;
+    background:#DF5519;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    box-shadow:inset 0 -3px 6px #BA2541;
+
+}
+
+.home-getticket span {
+    font-size:0.8em;
+    font-weight:400;
+}
+
+.why-attend{
+    text-align: center;
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:2em;
+}
+
+.why-attend .col img {
+    max-width:90%;
+}
+
+h3.note {
+    font-family:"Georgia", serif;
+    font-style:italic;
+    font-weight:normal;
+    font-size:22px;
+}
+
+.venue{
+    border-bottom:1px solid #D9DCDE;
+    position:relative;
+    padding-bottom:2em;
+}
+
+.venue .hotel-details img {
+    width:50%;
+    float:right;
+    margin-left:20px;
+}
+
+.home .venue .hotel-details img {
+    width:100%;
+}
+
+.venue .hotel-details h3{
+    margin:0 0 1em;
+    font-size:22px;
+    line-height:1;
+}
+
+.sponsors, .sponsors-details{
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:2em;
+    text-align:center;
+    background:#fcfcfc;
+}
+
+.sponsors-details article {
+   /*text-align: left;*/
+}
+
+.sponsors h3, .sponsors-details h3{
+    text-align: center;
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:0.7em;
+   color:#DF5519;
+   font-size:22px;
+}
+
+.sponsors h3.main-sponsors-title, .sponsors-details h3.main-sponsors-title {
+
+}
+
+.sponsors a.become-sponsor, .sponsors-details a.become-sponsor {
+        border:none;
+        background:#DF5519;
+        width:auto;
+        padding:10px 30px;
+        color:#fff;
+        display:inline-block;
+        font-size:1.3em;
+        border-radius:4px;
+        margin:0 0 1.3em;
+}
+
+.sponsors .col img {
+    max-width:100%;
+    vertical-align: middle;
+}
+
+ul.regular-sponsors, ul.main-sponsors {
+    text-align:center;
+    padding:0;
+    margin:35px 0;
+}
+
+ul.main-sponsors li {
+    display:inline-block;
+    padding:0 20px;
+}
+
+ul.regular-sponsors li {
+    display:inline-block;
+    text-align: center;
+    margin:0 20px 15px;
+}
+
+ul.regular-sponsors li img{
+    max-width:100%;
+}
+
+.center {
+    text-align:center;
+}
+
+.left {
+    text-align:left;
+}
+
+.right {
+    text-align:right;
+}
+
+
+.schedule-table li{
+    list-style: none;
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: .5em 0;
+    border-bottom: 1px solid #D9DCDE;
+}
+.schedule-table li .thumbnail {
+    line-height: 0;
+}
+.schedule-table dt.break{
+    color: #999;
+}
+.schedule-table {
+    border-top: 1px solid #D9DCDE;
+    padding:0 0 30px;
+    text-align:left;
+}
+.schedule-table dl{
+    overflow: hidden;
+    padding-left: 20%;
+    margin:0.8em 0;
+}
+.schedule-table dt{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #00addc;
+    text-transform: uppercase;
+}
+.schedule-table dd {
+    margin:0;
+}
+
+.schedule-table h4 {
+    margin:5px 0;
+    font-size:18px;
+}
+
+.schedule-table .description {
+    margin:1em 0 0;
+}
+
+.schedule-table .time{
+    line-height: 28px;
+    position:absolute;
+    left:0;
+    color:#000;
+}
+.schedule-table .thumbnail{
+    float: left; padding-right: 1em;
+}
+
+.schedule-table .thumbnail img {
+    width: 80px;
+    height: 80px;
+    margin-bottom:10px;
+}
+
+/* CONTACT FORM
+---------------------------------------*/
+
+.attendee {
+    display:none;
+}
+
+.attendee div {
+    margin-left:45px;
+}
+
+.attendee1 {
+    display:block;
+}
+
+.attendee div.attendee-index {
+    border-radius:50%;
+    text-align:center;
+    background:#DF5519;
+    width:30px;
+    height:30px;
+    color:#fff;
+    float:left;
+    margin:0;
+    line-height:30px;
+}
+
+.form-container {
+    border:1px solid #ddd;
+    background:#fcfcfc;
+    border-radius:4px;
+    padding:25px;
+   margin-top:-30px;
+}
+
+#contact-form  {
+  display:block;
+  margin:30px 0;
+  text-align:left;
+  overflow:hidden;
+}
+
+#contact-form h4 {
+    font-size:1.2em;
+}
+
+#contact-form  div {
+  padding:0 0 20px;
+}
+
+#contact-form  div.col {
+  padding:0 0 20px;
+  margin:0;
+}
+
+
+#contact-form label.required {
+    font-weight:bold;
+}
+
+#contact-form  fieldset {
+  /*float:left;*/
+  clear:both;
+}
+
+#contact-form  input[type="text"], #contact-form  input[type="email"], #contact-form textarea {
+  border:1px solid #F0F0F0;
+  -moz-box-shadow:1px 1px #FFF, 1px 1px 1px #aaa inset;
+  -webkit-box-shadow:1px 1px #FFF, 1px 1px 1px #aaa inset;
+  box-shadow:1px 1px #FFF, 1px 1px 1px #aaa inset;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  padding:7px;
+  width:90%;
+  background:#FFF ;
+  margin-top:5px;
+  -webkit-transition:background 0.2s ease-in;
+    -moz-transition:background 0.2s ease-in;
+    transition:background 0.2s ease-in;
+    font-family:'proxima-nova',Arial, Helvetica, sans-serif;
+}
+
+#contact-form  textarea {
+  width:75%;
+  height:143px;
+  font-size:14px;
+  line-height:130%;
+}
+
+#contact-form select {
+    padding:5px;
+}
+
+#contact-form  input[type="text"]:focus, #contact-form  textarea:focus {
+  background:#F9F9F9;
+}
+
+#contact-form span {
+  font-size:12px;
+}
+
+.error {
+  color:#F03000;
+}
+.thanks {
+  color:#00CCCC;
+  font-size:1.2em;
+  border:1px solid #ddd;
+  background:#fcfcfc;
+  border-radius:4px;
+  padding:25px;
+  margin-bottom:30px;
+}
+
+form#contact-form input[type="submit"] {
+    color: #fff;
+    display: inline-block;
+    clear: both;
+    margin-top: 20px;
+    border:none;
+    background:#DF5519;
+    width:auto;
+    padding:10px 30px;
+    color:#fff;
+    font-size:1.3em;
+    border-radius:4px;
+}
+
+.thanks, .error{
+    display:none;
+}
+
+.total-price, .total-price span {
+    font-size:24px!important;
+    font-weight:700;
+}
+
+.total-price span.discount {
+    font-size:16px!important;
+    font-weight:400;
+    display:none;
+}
+
+/* FOOTER ELEMENTS
+-----------------------------*/
+
+.organized-by, .hosted-by {
+    font-size:0.8em;
+    margin-top:2em;
+}
+
+.organized-by img {
+    vertical-align: middle;
+    margin:10px 0 0;
+}
+
+/* COLUMNS GRIDS
+---------------------------------*/
+
+/* Columns */
+.col {
+    float: left;
+    margin-left: 3.2%;
+    margin-bottom: 30px;
+}
+.fullwidth .col {
+    float: none;
+    margin-left: 0;
+}
+/* grid4 col */
+.grid4 .col {
+    width: 22.6%;
+}
+/* grid3 col */
+.grid3 .col, .grid2 .grid3 .col{
+    width: 31.2%;
+}
+
+.grid2 .grid3 .col {
+    margin-bottom:15px;
+}
+/* grid2 col */
+.grid2 .col {
+    width: 48.4%;
+}
+/* clear col */
+.grid4 .col:nth-of-type(4n+1),
+.grid3 .col:nth-of-type(3n+1),
+.grid2 .col:nth-of-type(2n+1) {
+    margin-left: 0;
+    clear: left;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    nav ul li {
+        font-size:0.9em;
+        padding:0 19px;
+    }
+
+}
+
+@media screen and (max-width: 979px) {
+    .content h2 {
+        font-size:29px;
+        line-height:1.2;
+    }
+    .content h2 span {
+        font-size:18px;
+    }
+
+    .speakers h3, .why-attend h3 {
+        width:100%;
+        font-size:22px;
+    }
+
+    .main-tagline {
+        font-size:26px;
+    }
+
+}
+
+
+@media screen and (max-width: 740px) {
+/* reset cols to 3-column */
+    /* grid4 */
+    .grid4 .col {
+        width: 31.2%;
+    }
+    .grid4 .col:nth-of-type(4n+1) {
+        margin-left: 3.2%;
+        clear: none;
+    }
+    .grid4 .col:nth-of-type(3n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+
+    .venue .col, .sponsors .col, .why-attend .grid2 .col, .registration .col, .become-sponsor .col {
+        width: 100% !important;
+        margin-left: 0 !important;
+        clear: none !important;
+    }
+
+    .become-sponsor .col {
+        margin-bottom:0;
+    }
+
+    ul.regular-sponsors li {
+        width:29%;
+    }
+
+    .top-bar{
+        position:absolute;
+        height:45px;
+    }
+
+
+    .logo {
+        margin-bottom:50px;
+    }
+
+    .nav-left, .nav-right, .top-logo {
+        display:none;
+    }
+
+    .wrapper.active {
+        left: 15em;
+        position:relative;
+    }
+    a.menu-link {
+        float: left;
+        display: block;
+    }
+    nav.mobile-menu {
+      display:block;
+      clear: both;
+      overflow: hidden;
+      background:#111;
+      box-shadow:1px 0 3px #ccc;
+    }
+    .js nav.mobile-menu {
+      width: 15em;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -15em;
+    }
+    nav.mobile-menu ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav.mobile-menu li {
+        display:block;
+        text-align: left;
+    }
+    nav.mobile-menu li a {
+      display: block;
+      padding: 0.8em;
+      color: #fff;
+      border-bottom: 1px solid #333;
+      text-transform:uppercase;
+    }
+
+    header {
+        position:absolute;
+    }
+        .schedule-table strong.time  {
+        position:relative;
+    }
+
+        .schedule-table dl {
+        padding:0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+/* reset cols to 2-column */
+    /* grid4 */
+    .grid4 .col {
+        width: 48.4%;
+    }
+    .grid4 .col:nth-of-type(3n+1) {
+        margin-left: 3.2%;
+        clear: none;
+    }
+    .grid4 .col:nth-of-type(2n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+
+    /* grid3 */
+    .grid3 .col {
+        width: 48.4%;
+    }
+    .grid3 .col:nth-of-type(3n+1) {
+        margin-left: 3.2%;
+        clear: none;
+    }
+    .grid3 .col:nth-of-type(2n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+
+    .speaker-details, .sponsors-details article {
+        /*text-align: center*/
+    }
+
+    .speaker-details .image, .speaker-details .details, .sponsor-details .image, .sponsor-details .details {
+        float:none;
+        width:100%;
+        margin-right:0;
+    }
+
+    .speaker-details h3 {
+        margin-top:1em;
+    }
+
+    .speakers h3,.schedule h3, .registration h3, .become-sponsor h3 {
+        font-size:22px;
+        width:100%;
+    }
+    .content h2 {
+        margin-bottom:35px;
+    }
+
+    #contact-form  input[type="text"], #contact-form  input[type="email"], #contact-form textarea, #contact-form select{
+        width:100%;
+      }
+
+    .form-container {
+        padding:25px 10px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .logo {
+        font-size:65px;
+    }
+
+    .home .content {
+        margin-top:400px;
+    }
+   .content {
+        margin-top:270px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 480px) {
+/* reset cols to fullwidth */
+    /* grid4 */
+    /*.col {
+        width: 100% !important;
+        margin-left: 0 !important;
+        clear: none !important;
+    }*/
+    ul.regular-sponsors li {
+        width:49%;
+    }
+
+    .logo {
+        font-size:50px;
+        margin-bottom:20px;
+    }
+
+    .home-getticket {
+        font-size:16px;
+    }
+
+    .home-getticket span {
+        font-size:0.8em;
+    }
+
+    .home .content {
+        margin-top:330px;
+    }
+
+    .content {
+        margin-top:200px;
+    }
+
+    header {
+        padding-top:65px;
+        background-position:50% 0;
+    }
+
+    .main-tagline {
+        font-size:22px;
+    }
+
+    .venue .hotel-details img {
+        width:100%;
+        margin-bottom:20px;
+    }
+
+     .venue .hotel-details {
+        margin-bottom:0;
+    }
+
+    .schedule-table h4, .schedule-table dt{
+        font-size:100%;
+    }
+
+
+
+}
+
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
